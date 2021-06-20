@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Credit Card Defaulter Prediction</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="./static/css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="./static/css2/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+
+  <body>
+    <nav class="indigo lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">CCD Prediction</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Predict</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Predict</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br /><br />
+        <h1 class="header center teal-text">
+          Credit Card Defaulter Prediction
+        </h1>
+        <div class="row center">
+          <h5 class="header col s12 light">
+            Predict if a particular customer is likely to pay the credit card
+            bill in next month or not!
+            <br />
+          </h5>
+          <h6>
+            The prediction is based on a Machine Learning Model created using
+            Random Forest Classifier.
+          </h6>
+        </div>
+
+        <div class="row">
+          <form action="/predict" method="POST" class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <label for="first_name"><b>Limit Balance</b></label>
+                <br />
+                <input
+                  id="lm"
+                  name="Limit Balance"
+                  type="text"
+                  class="validate"
+                />
+              </div>
+              <div class="input-field col s6">
+                <label for="last_name"><b>Pay 1</b></label>
+                <br />
+                <input id="p1" name="Pay 1" type="text" class="validate" />
+              </div>
+            </div>
+
+            <div class="row center">
+              <button
+                type="submit"
+                class="btn-large waves-effect waves-light teal darken-4"
+              >
+                Predict Probability
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <br />
+        <h5 class="{{c}}" align="center"><b>{{pred}}</b></h5>
+        <br />
+      </div>
+    </div>
+
+    <br /><br />
+    <footer class="page-footer indigo accent-1">
+      <div class="footer-copyright">
+        <div class="container">
+          Made by
+          <a class="white-text" href="www.linkedin.com/in/mohd-yasar-2a75931b5"
+            >Mohd Yasar</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src=".js/materialize.js"></script>
+    <script src="js/init.js"></script>
+  </body>
+</html>
